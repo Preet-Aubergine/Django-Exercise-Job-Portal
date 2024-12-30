@@ -1,0 +1,45 @@
+# Python
+*.pyc
+*.pyo
+__pycache__/
+
+# Django
+*.log
+*.pot
+*.py[cod]
+*.sqlite3
+db.sqlite3
+/static/
+/media/
+
+# Virtual environment
+venv/
+env/
+jobenv/  # Your virtual environment folder
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+
+# Django migrations
+*/migrations/*.pyc
+*/migrations/__init__.py
+
+# Compiled files
+*.pyc
+*.pyo
+
+# Configuration files for packaging
+*.egg-info/
+
+# Distribution/packaging
+*.egg
+*.tar.gz
+*.zip
+
+# VSCode settings
+.vscode/
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
