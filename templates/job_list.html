@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job List</title>
+</head>
+
+<body>
+    {% block content %}
+    <h1>Job List</h1>
+
+    {% if message %}
+    <p>{{ message }}</p>
+    {% else %}
+    <ul>
+        {% for job in jobs %}
+        <li>
+            <h3>{{ job.name }}</h3>
+            <p>{{ job.desc }}</p>
+            <p><strong>Location:</strong> {{ job.location }}</p>
+            <p><strong>Salary Range:</strong> {{ job.salary_from }} - {{ job.salary_to }}</p>
+            <p><strong>Tags:</strong> {{ job.tags }}</p>
+            <a href="{% url 'edit_job' job.id %}">Edit</a> |
+            <a href="{% url 'delete_job' job.id %}">Delete</a>
+        </li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    {% endblock %}
+</body>
+
+</html>

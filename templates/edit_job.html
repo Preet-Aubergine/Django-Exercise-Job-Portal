@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Job Post</title>
+</head>
+<body>
+    {% block content %}
+    <h1>Edit Job Post</h1>
+    <form method="post">
+        {% csrf_token %}
+        
+        <input type="text" name="name" value="{{ job.name }}" placeholder="Job Name"><br>
+        <input type="text" name="desc" value="{{ job.desc }}" placeholder="Job Description"><br>
+        <input type="text" name="location" value="{{ job.location }}" placeholder="Location"><br>
+        <input type="text" name="salaryfrom" value="{{ job.salary_from }}" placeholder="Starting Salary"><br>
+        <input type="text" name="salaryto" value="{{ job.salary_to }}" placeholder="Ending Salary"><br>
+        <input type="text" name="tags" value="{{ job.tags }}" placeholder="Tags"><br>
+        
+        <input type="submit" value="Update Job">
+    </form>
+<!-- 
+    <div>
+        {% for message in messages %}
+            <h3>{{ message }}</h3>
+        {% endfor %}
+    </div> -->
+    {% endblock %}
+</body>
+</html>

@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post</title>
+</head>
+<body>
+    {% block content %}
+    <form method="post">
+        {% csrf_token %}
+
+        <input type="text" name="name" placeholder="job name"><br>
+        <input type="text" name="desc" placeholder="job desc"><br>
+        <input type="text" name="location" placeholder="location"><br>
+        <input type="text" name="salaryfrom" placeholder="Starting salary"><br>
+        <input type="text" name="salaryto" placeholder="Ending salary"><br>
+        <input type="text" name="tags" placeholder="tags"><br>
+        <input type="submit">
+    </form>
+    <!-- <div>
+        {% for message in messages %}
+        <h3>{{message}}</h3>
+        {% endfor %}
+    </div> -->
+    {% endblock %}
+</body>
+</html>
