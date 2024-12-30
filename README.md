@@ -10,6 +10,7 @@ This is a Django-based Job Portal application where users can register, log in, 
 ```bash
 git clone https://github.com/yourusername/job-portal.git
 cd job-portal
+```
 
 ---
 
@@ -17,12 +18,19 @@ cd job-portal
 ```bash
 python -m venv env
 source env/bin/activate
+```
+
+---
 
 ### 3. Install dependencies 
 ```bash
 pip install -r requirements.txt
+```
+
+---
 
 ### 4. Run server
 ```bash
 python manage.py runserver
+```
 
