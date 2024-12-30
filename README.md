@@ -11,6 +11,8 @@ This is a Django-based Job Portal application where users can register, log in, 
 git clone https://github.com/yourusername/job-portal.git
 cd job-portal
 
+---
+
 ### 2. Create and activate virtual environment 
 ```bash
 python -m venv env
