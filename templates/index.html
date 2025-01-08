@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,8 +13,10 @@
 <body>
 	{% block content %}
 	<nav class="navbar navbar-expand-lg navbar-light bg-light">
-		<div class="container-fluid">
-			<a class="navbar-brand" href="#">Job Portal</a>
+		<div class="container-fluid d-flex flex-column">
+			<div class="container text-center">
+				<a class="navbar-brand fs-1" href="#">Job Portal</a>
+			</div>
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
 					<li class="nav-item">
@@ -48,13 +51,10 @@
 					</li>
 					{% endif %}
 				</ul>
-				<form class="d-flex">
-					<input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-					<button class="btn btn-outline-success" type="submit">Search</button>
-				</form>
 			</div>
 		</div>
 	</nav>
+	<div style="background-image: url('{% static "images/bg.jpg" %}'); background-size: cover; background-repeat: no-repeat; height: 81vh;"></div>
 	{% endblock %}
 </body>
 

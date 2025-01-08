@@ -11,7 +11,7 @@ def post(request):
         salary_from = request.POST.get('salaryfrom')
         salary_to = request.POST.get('salaryto')
         tags = request.POST.get('tags')
-
+        #TODO: Add validation for salary_from and salary_to
         if not name or not desc or not location or not salary_from or not salary_to or not tags:
             messages.error(request, "All fields are required.")
             return redirect('jobs:post')

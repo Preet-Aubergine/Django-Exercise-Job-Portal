@@ -1,14 +1,47 @@
 {% extends 'base.html' %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Post</title>
 </head>
+
 <body>
     {% block content %}
-    <form method="post">
+    <div class="container">
+        <h1 class="text-center">Create Job Post</h1>
+        <form method="post">
+            {% csrf_token %}
+            <div class="mb-3">
+                <label for="name" class="form-label">Job Name</label>
+                <input type="text" name="name" class="form-control" id="name">
+            </div>
+            <div class="mb-3">
+                <label for="desc" class="form-label">Job Description</label>
+                <input type="text" name="desc" class="form-control" id="desc">
+            </div>
+            <div class="mb-3">
+                <label for="location" class="form-label">Job Location</label>
+                <input type="text" name="location" class="form-control" id="location">
+            </div>
+            <div class="mb-3">
+                <label for="salaryfrom" class="form-label">Starting Salary</label>
+                <input type="text" name="salaryfrom" class="form-control" id="salaryfrom">
+            </div>
+            <div class="mb-3">
+                <label for="salaryto" class="form-label">Ending Salary</label>
+                <input type="text" name="salaryto" class="form-control" id="salaryto">
+            </div>
+            <div class="mb-3">
+                <label for="tags" class="form-label">Tags</label>
+                <input type="text" name="tags" class="form-control" id="tags">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+    <!-- <form method="post">
         {% csrf_token %}
 
         <input type="text" name="name" placeholder="job name"><br>
@@ -18,7 +51,7 @@
         <input type="text" name="salaryto" placeholder="Ending salary"><br>
         <input type="text" name="tags" placeholder="tags"><br>
         <input type="submit">
-    </form>
+    </form> -->
     <!-- <div>
         {% for message in messages %}
         <h3>{{message}}</h3>
@@ -26,4 +59,5 @@
     </div> -->
     {% endblock %}
 </body>
+
 </html>
