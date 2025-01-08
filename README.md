@@ -57,6 +57,6 @@ python manage.py runserver
 ```
 
 ### 6. Key Components
-portal/: Handles user authentication (register, login, logout).
-companies/: Manages company details (name, address, contact).
-jobs/: Allows users to post and manage job listings.
+  - portal/: Handles user authentication (register, login, logout).
+  - companies/: Manages company details (name, address, contact).
+  - jobs/: Allows users to post and manage job listings.
