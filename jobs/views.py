@@ -1,8 +1,38 @@
+"""
+This module defines the views for the 'jobs' application.
+
+Functions:
+    post(request): Handles job posting.
+    job_list(request): Displays a list of jobs.
+    edit_job(request, job_id): Handles editing a job.
+    delete_job(request, job_id): Handles deleting a job.
+
+Dependencies:
+    django.shortcuts.render: Renders a template.
+    django.shortcuts.get_object_or_404: Retrieves an object or raises a 404 error if not found.
+    django.shortcuts.redirect: Redirects to a different URL.
+    django.contrib.messages: Provides a way to store messages in one request and retrieve them in a subsequent request.
+    .models.JobPost: The model representing job postings.
+"""
+
 from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib import messages
 from .models import JobPost
 
 def post(request):
+    """
+    Handles job posting.
+
+    If the request method is POST, validates the form data and saves the job posting.
+    If the form data is invalid, displays an error message and redirects to the job posting page.
+    If the request method is not POST, renders the job posting page.
+
+    Args:
+        request (HttpRequest): The request object used to generate this response.
+
+    Returns:
+        HttpResponse: The response object containing the rendered job posting page or a redirect.
+    """
     if request.method == 'POST':
 
         name = request.POST.get('name')
